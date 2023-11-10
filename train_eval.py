@@ -330,7 +330,7 @@ if __name__ == '__main__':
         batch = gen_batch_mog(batchsize=batchsize, seq_len=seq_len, dim=1, stddev=1)
         # dataset = sample_mixture_gaussians(1000, 500, 1, num_components=10, stddev=1)
         path = "/home/skang/perceiver-test-Gauss/evaluation/test"
-        if (i + 1) % 1 == 0:
+        if (i + 1) % 5000 == 0:
             evaluate(model1, model2, path, i+1+170000)
 
         train_loss = run(total_epoch=1, batch=batch, writer=writer)
